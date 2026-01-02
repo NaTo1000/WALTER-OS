@@ -86,7 +86,7 @@ function makeMove(index, player) {
     cell.textContent = player;
     cell.classList.add('taken');
     
-    checkTTTResult();
+    checkTTTResult(player);
 }
 
 function wallyTTTMove() {
@@ -128,7 +128,7 @@ function getRandomEmptyCell() {
     return emptyCells.length > 0 ? emptyCells[Math.floor(Math.random() * emptyCells.length)] : null;
 }
 
-function checkTTTResult() {
+function checkTTTResult(lastPlayer) {
     let roundWon = false;
     
     for (let condition of tttWinningConditions) {
@@ -143,9 +143,8 @@ function checkTTTResult() {
     }
     
     if (roundWon) {
-        const winner = tttCurrentPlayer === 'X' ? 'O' : 'X';
         document.getElementById('ttt-status').textContent = 
-            winner === 'X' ? '🎉 You won!' : '😔 Wally won!';
+            lastPlayer === 'X' ? '🎉 You won!' : '😔 Wally won!';
         tttGameActive = false;
         return;
     }
