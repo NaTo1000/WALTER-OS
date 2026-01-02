@@ -403,12 +403,12 @@ class Game:
         self.last_hit_time = pygame.time.get_ticks()
         
         # Increase multiplier with combo
-        if self.combo > 5:
-            self.multiplier = min(5, 2)
-        if self.combo > 10:
-            self.multiplier = min(5, 3)
         if self.combo > 20:
             self.multiplier = 5
+        elif self.combo > 10:
+            self.multiplier = 3
+        elif self.combo > 5:
+            self.multiplier = 2
     
     def handle_input(self):
         keys = pygame.key.get_pressed()
