@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALTER-OS - Game Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 WALTER-OS Game Center</h1>
+            <p class="subtitle">Choose a game to verse Wally!</p>
+        </header>
+
+        <div id="menu" class="menu">
+            <div class="game-card" onclick="loadGame('tictactoe')">
+                <div class="game-icon">❌⭕</div>
+                <h2>Tic-Tac-Toe</h2>
+                <p>Classic 3x3 grid strategy game</p>
+            </div>
+            <div class="game-card" onclick="loadGame('rps')">
+                <div class="game-icon">✊✋✌️</div>
+                <h2>Rock Paper Scissors</h2>
+                <p>Best of luck against Wally!</p>
+            </div>
+            <div class="game-card" onclick="loadGame('guess')">
+                <div class="game-icon">🔢</div>
+                <h2>Number Guessing</h2>
+                <p>Guess Wally's number 1-100</p>
+            </div>
+            <div class="game-card" onclick="loadGame('coin')">
+                <div class="game-icon">🪙</div>
+                <h2>Coin Flip</h2>
+                <p>Call heads or tails!</p>
+            </div>
+        </div>
+
+        <!-- Tic-Tac-Toe Game -->
+        <div id="tictactoe" class="game-screen" style="display:none;">
+            <h2>Tic-Tac-Toe vs Wally</h2>
+            <div class="game-status" id="ttt-status">Your turn! You are X</div>
+            <div class="ttt-board" id="ttt-board">
+                <div class="ttt-cell" data-index="0"></div>
+                <div class="ttt-cell" data-index="1"></div>
+                <div class="ttt-cell" data-index="2"></div>
+                <div class="ttt-cell" data-index="3"></div>
+                <div class="ttt-cell" data-index="4"></div>
+                <div class="ttt-cell" data-index="5"></div>
+                <div class="ttt-cell" data-index="6"></div>
+                <div class="ttt-cell" data-index="7"></div>
+                <div class="ttt-cell" data-index="8"></div>
+            </div>
+            <button class="btn" onclick="resetTicTacToe()">New Game</button>
+            <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+        </div>
+
+        <!-- Rock Paper Scissors Game -->
+        <div id="rps" class="game-screen" style="display:none;">
+            <h2>Rock Paper Scissors vs Wally</h2>
+            <div class="game-status" id="rps-status">Choose your move!</div>
+            <div class="score-board">
+                <div>You: <span id="rps-player-score">0</span></div>
+                <div>Wally: <span id="rps-wally-score">0</span></div>
+            </div>
+            <div class="rps-choices">
+                <button class="choice-btn" onclick="playRPS('rock')">✊ Rock</button>
+                <button class="choice-btn" onclick="playRPS('paper')">✋ Paper</button>
+                <button class="choice-btn" onclick="playRPS('scissors')">✌️ Scissors</button>
+            </div>
+            <div id="rps-result" class="result-display"></div>
+            <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+        </div>
+
+        <!-- Number Guessing Game -->
+        <div id="guess" class="game-screen" style="display:none;">
+            <h2>Guess Wally's Number</h2>
+            <div class="game-status" id="guess-status">Guess a number between 1 and 100!</div>
+            <div class="guess-info">
+                <p>Attempts: <span id="guess-attempts">0</span></p>
+                <p id="guess-hint"></p>
+            </div>
+            <input type="number" id="guess-input" min="1" max="100" placeholder="Enter your guess">
+            <button class="btn" onclick="makeGuess()">Submit Guess</button>
+            <button class="btn" onclick="resetGuess()">New Game</button>
+            <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+        </div>
+
+        <!-- Coin Flip Game -->
+        <div id="coin" class="game-screen" style="display:none;">
+            <h2>Coin Flip vs Wally</h2>
+            <div class="game-status" id="coin-status">Call it!</div>
+            <div class="score-board">
+                <div>You: <span id="coin-player-score">0</span></div>
+                <div>Wally: <span id="coin-wally-score">0</span></div>
+            </div>
+            <div class="coin-display" id="coin-display">🪙</div>
+            <div class="coin-choices">
+                <button class="choice-btn" onclick="flipCoin('heads')">Heads</button>
+                <button class="choice-btn" onclick="flipCoin('tails')">Tails</button>
+            </div>
+            <div id="coin-result" class="result-display"></div>
+            <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
