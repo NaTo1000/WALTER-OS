@@ -27,9 +27,9 @@ python flipper.py
 5. **Watch the Multiplier** - It resets after 3 seconds of no hits
 
 ### Combo System
-- 5+ consecutive hits = 2x multiplier 🔥
-- 10+ consecutive hits = 3x multiplier 🔥🔥
-- 20+ consecutive hits = 5x multiplier 🔥🔥🔥
+- 6+ consecutive hits = 2x multiplier 🔥
+- 11+ consecutive hits = 3x multiplier 🔥🔥
+- 21+ consecutive hits = 5x multiplier 🔥🔥🔥
 
 ### Visual Cues
 - **Yellow/Orange Flippers** - Press to activate

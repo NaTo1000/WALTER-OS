@@ -97,10 +97,10 @@ print("✓ Particle system working correctly")
 # Test scoring system
 print("\n[Testing Scoring System]")
 print("  Testing combo multipliers:")
-print("    0-5 hits: 1x multiplier")
+print("    1-5 hits: 1x multiplier")
 print("    6-10 hits: 2x multiplier")
 print("    11-20 hits: 3x multiplier")
-print("    20+ hits: 5x multiplier")
+print("    21+ hits: 5x multiplier")
 print("✓ Scoring system configured correctly")
 
 # Verify game constants

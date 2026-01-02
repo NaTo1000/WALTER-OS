@@ -70,9 +70,9 @@ chmod +x flipper.py
 
 ### Multiplier System
 
-- **5+ hits** → 2x multiplier
-- **10+ hits** → 3x multiplier  
-- **20+ hits** → 5x multiplier (MAX!)
+- **6+ hits** → 2x multiplier
+- **11+ hits** → 3x multiplier  
+- **21+ hits** → 5x multiplier (MAX!)
 
 Combos reset after 3 seconds of inactivity, so keep the action going!
 

@@ -97,7 +97,7 @@ Clean, informative interface:
 ```
 Hit Count    Multiplier    Display
 ---------    ----------    -------
-0-5          1x            None
+1-5          1x            None
 6-10         2x            Orange "x2"
 11-20        3x            Orange "x3"
 21+          5x            Orange "x5"
